@@ -23,18 +23,7 @@ Speaker, author, lateral thinker & happy.</p>
         <p class="view"><a target="_blank" href="https://linkedin.com/in/andreneubauer">LinkedIn</a></p>
         <p class="view"><a target="_blank" href="https://twitter.com/devpg">Twitter</a></p>
         <p class="view"><a target="_blank" href="https://speakerdeck.com/devpg">Speaker Deck</a></p>
-        <p class="view"><a target="_blank" href="https://github.com/devpg">GitHub</a></p>
-
-<h1>Tags<span class="hint">({{site.tags.size}})</span></h1>   
-  <ul class="tagCloud">
-     {% for tag in site.tags %}      
-     <li>
-      <a href="tags.html#{{ tag | first | cgi_encode }}" 
-      style="font-size:{{tag | last | size | times:100 | divided_by:site.tags.size | plus:100}}%">
-    {{ tag | first }}</a>
-    {% unless forloop.last %}, {% endunless %}
-  </li>
-  {% endfor %}    
+        <p class="view"><a target="_blank" href="https://github.com/devpg">GitHub</a></p> 
       </header>
 
       <section>
