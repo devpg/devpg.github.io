@@ -1,8 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2013-06-16 23:28:32
-categories: jekyll update
+title:  Welcome to Jekyll!
 tags: [abc, def]
 ---
 
