@@ -31,24 +31,26 @@ layout: default
   </article>
 {% endfor %}
 
-<ul class="paginator">
-  <li>
-    {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        <a href="/" class="strong"><<</a>
+{% if paginator.total_pages > 1 %}
+  <ul class="paginator">
+    <li>
+      {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+          <a href="/" class="strong"><<</a>
+        {% else %}
+          <a href="/page{{ paginator.previous_page }}" class="strong"><<</a>
+        {% endif %}
       {% else %}
-        <a href="/page{{ paginator.previous_page }}" class="strong"><<</a>
+        <span>-</span>
       {% endif %}
-    {% else %}
-      <span>-</span>
-    {% endif %}
-  </li>
+    </li>
 
-  <li>
-    {% if paginator.next_page %}
-      <a href="/page{{ paginator.next_page }}" class="strong">>></a>
-    {% else %}
-      <span>-</span>
-    {% endif %}
-  </li>
-</ul>
+    <li>
+      {% if paginator.next_page %}
+        <a href="/page{{ paginator.next_page }}" class="strong">>></a>
+      {% else %}
+        <span>-</span>
+      {% endif %}
+    </li>
+  </ul>
+{% endif %}
