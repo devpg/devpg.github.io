@@ -40,7 +40,7 @@ layout: default
         <a href="/page{{ paginator.previous_page }}" class="strong"><<</a>
       {% endif %}
     {% else %}
-      <span><<</span>
+      <span>-</span>
     {% endif %}
   </li>
 
@@ -48,7 +48,7 @@ layout: default
     {% if paginator.next_page %}
       <a href="/page{{ paginator.next_page }}" class="strong">>></a>
     {% else %}
-      <span>>></span>
+      <span>-</span>
     {% endif %}
   </li>
 </ul>
