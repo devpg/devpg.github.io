@@ -82,6 +82,19 @@ header {
   position:fixed;
 }
 
+#talks img {
+  border: 1px solid #e5e5e5;
+  width: 75%;
+  height: 75%;
+}
+
+#talks figure {
+  display: table-cell;
+  padding: 0 4px;
+  text-align: center;
+  width: 200px;
+}
+
 article {
   margin-bottom:50px;
 }
@@ -153,7 +166,8 @@ strong {
 section {
   width:500px;
   float:right;
-  padding-bottom:50px;
+  border-top:1px solid #e5e5e5;
+  padding: 20px 0;
 }
 
 small {
@@ -171,7 +185,7 @@ footer {
   width:270px;
   float:left;
   position:fixed;
-  bottom:50px;
+  bottom:20px;
 }
 
 @media print, screen and (max-width: 960px) {
@@ -190,14 +204,7 @@ footer {
   header {
     padding-right:320px;
   }
-  
-  section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
-  }
-  
+    
   header a small {
     display:inline;
   }
