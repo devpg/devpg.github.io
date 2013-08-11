@@ -95,16 +95,20 @@ header {
   width: 200px;
 }
 
+#talks {
+  border-bottom:1px solid #e5e5e5;
+}
+
 article {
   margin-bottom:50px;
 }
 
 p.metadata {
-    float:left;
-    width:30px;
-    font-size:10px;
-    padding:0;
-    margin:0;
+  float:left;
+  width:30px;
+  font-size:10px;
+  padding:0;
+  margin:0;
 }
 
 article .title {
@@ -166,7 +170,6 @@ strong {
 section {
   width:500px;
   float:right;
-  border-top:1px solid #e5e5e5;
   padding: 20px 0;
 }
 
@@ -214,6 +217,11 @@ footer {
     right:50px;
     top:52px;
   }
+
+  #talks {
+    border-top:1px solid #e5e5e5;
+  }  
+
 }
 
 @media print, screen and (max-width: 720px) {
