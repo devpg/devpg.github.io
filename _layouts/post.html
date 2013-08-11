@@ -1,9 +1,19 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
-</div>
+<article>
+  <p class="metadata">
+    <strong>{{ page.date | date: "%b %d"}}</strong>
+    {{ page.date | date: "%Y" }}
+  </p>
+  <h2 class="title">{{ page.title }}</h2>
+
+  {{ content }}
+</article>
+
+<p class="comments">
+  No comment section here ... But feel free to tweet about it.<br />
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="devpg" data-hashtags="{{ page.tags | array_to_sentence_string }}" data-dnt="true">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</p>
