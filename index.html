@@ -2,21 +2,8 @@
 layout: default
 ---
 
-{% for post in site.posts %}
-  <article>
 
-    <p class="metadata">
-      <strong>{{ post.date | date: "%b %d"}}</strong>
-      {{ post.date | date: "%Y" }}
-    </p>
-    <h2 class="title">
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </h2>    
-    {{ post.excerpt }}
-  </article>
-{% endfor %}
-
-
+<section>
 {% for post in paginator.posts %}
   <article>
 
@@ -38,7 +25,7 @@ layout: default
         {% if paginator.previous_page == 1 %}
           <a href="/" class="strong"><<</a>
         {% else %}
-          <a href="/page{{ paginator.previous_page }}" class="strong"><<</a>
+          <a href="/blog/page{{ paginator.previous_page }}" class="strong"><<</a>
         {% endif %}
       {% else %}
         <span>-</span>
@@ -47,10 +34,11 @@ layout: default
 
     <li>
       {% if paginator.next_page %}
-        <a href="/page{{ paginator.next_page }}" class="strong">>></a>
+        <a href="/blog/page{{ paginator.next_page }}" class="strong">>></a>
       {% else %}
         <span>-</span>
       {% endif %}
     </li>
   </ul>
 {% endif %}
+</section>
