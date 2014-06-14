@@ -2,46 +2,6 @@
 layout: default
 ---
 
-
-<section>
-
-  <h2>Thoughts</h2>
-
-{% for post in paginator.posts %}
-  <article>
-
-    <p class="metadata">
-      <strong>{{ post.date | date: "%b %d"}}</strong>
-      {{ post.date | date: "%Y" }}
-    </p>
-    <h2 class="title">
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </h2>    
-    {{ post.excerpt }}
-  </article>
-{% endfor %}
-
-{% if paginator.total_pages > 1 %}
-  <ul class="paginator">
-    <li>
-      {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-          <a href="/" class="strong"><<</a>
-        {% else %}
-          <a href="/blog/page{{ paginator.previous_page }}" class="strong"><<</a>
-        {% endif %}
-      {% else %}
-        <span>-</span>
-      {% endif %}
-    </li>
-
-    <li>
-      {% if paginator.next_page %}
-        <a href="/blog/page{{ paginator.next_page }}" class="strong">>></a>
-      {% else %}
-        <span>-</span>
-      {% endif %}
-    </li>
-  </ul>
-{% endif %}
-</section>
+{% include navigation.html %}
+{% include welcome.html %}
+{% include publications.html %}

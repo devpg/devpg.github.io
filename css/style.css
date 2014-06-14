@@ -1,0 +1,164 @@
+---
+color: '#98A0A8'
+bgColor: '#ffffff'
+
+pub-bgColor: '#3498DB'
+pub-color: '#ffffff'
+
+slide3-bgColor: '#f5f6f6'
+
+slide4-bgColor: '#F5ECD9'
+slide4-color: '#2BACB5'
+
+footer-bgColor: '#E84D5B'
+footer-color: '#F5ECD9'
+---
+
+/*
+ * Author: Carlos Alvarez
+ * URL: http://alvarez.is
+ *
+ * Project Name: Munter - Free Bootstrap 3 Theme
+ * Version: 1.0
+ * URL: http://blacktie.co
+ * 
+ * --- MODIFICATIONS ---
+ * Author: André Neubauer
+ * URL: http://devpg.com
+ */
+
+
+* {
+	position: relative;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	color: {{ page.color }};
+	background-color: {{ page.bgColor }};
+	font-size: 1.3em;
+	overflow-x: hidden;
+}
+
+body, h1, h2, h3, h4 {
+	font-family: 'Raleway';	
+}
+
+i {
+	font-size: 4em;
+}
+
+h1 {
+	font-size: 36px;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 2em;
+	font-weight: 200;
+}
+
+.item {
+	padding: 0;
+}
+
+.navbar {
+	background-color: rgba( 255, 255, 255, .8);
+	border-bottom: 0 none;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	min-height: 47px;
+}
+
+.navbar-brand {
+	pading: 12px 40px 12px 12px;
+}
+
+.slide {
+	padding-bottom: 50px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#slide-welcome {
+	background: url('../images/bg1.jpg') no-repeat center center fixed;
+	color: #ffffff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 500px;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+#slide-welcome h1 {
+	padding-top: 130px;
+}
+
+#message-box {
+	background: rgba(255, 255, 255, .8);
+	width: 90%;
+	margin: 300px auto 0;
+	padding: 20px;
+	font-style: italic;
+	font-size: 2.5em;
+	color: {{ page.color }};
+}
+
+#message-box .icon-twitter {
+	font-size: 1em;
+	color: #00ACEE;
+}
+
+#slide-pub {
+	background-color: {{ page.pub-bgColor }};
+}
+
+
+#slide-pub h1 {
+	color: #282A2E;
+	text-transform: uppercase;
+}
+
+.thumbnail {
+	border: 1px solid {{ page.slide2-bgColor }};
+	padding: 15px 4px 0 4px;
+	background-color: {{ page.slide2-bgColor }};
+}
+
+.thumbnail img {
+	border: 1px solid #eeeeee;
+}
+
+.thumbnail p {
+	margin-top: 10px;
+}
+
+.thumbnail:hover {
+	border: 1px solid #dddddd;
+	background-color: #eeeeee;
+}
+
+#slide-3 {
+	background-color: {{ page.slide3-bgColor }};
+}
+	
+#slide-4 {
+	background-color: {{ page.slide4-bgColor }};
+	padding-bottom: 150px;
+}	
+
+.page-header {
+	text-align: left;
+	color: #4c4f55;
+}
+
+footer {
+	background-color: {{ page.footer-bgColor }};
+	color: {{ page.footer-color }};
+	padding-bottom: 10px;
+}
