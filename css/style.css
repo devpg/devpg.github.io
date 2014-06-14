@@ -79,8 +79,12 @@ h2 {
 
 .slide {
 	padding-bottom: 50px;
-	padding-top: 20px;
 	text-align: center;
+}
+
+.slide-header {
+	padding-top: 20px;
+	padding-bottom: 30px;
 }
 
 #slide-welcome {
@@ -120,9 +124,36 @@ h2 {
 
 
 #slide-pub h1 {
-	color: #282A2E;
+	color: {{ page.pub-color }};
 	text-transform: uppercase;
+	text-align:center;
+  	overflow:hidden;
 }
+
+#slide-pub h1 span{
+  display:inline-block;
+  position:relative;
+}
+#slide-pub h1 span:after, 
+#slide-pub h1 span:before{
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  top: 15px;
+  width: 600px;  
+}
+
+#slide-pub h1 span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+#slide-pub h1 span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
 
 .thumbnail {
 	border: 1px solid {{ page.slide2-bgColor }};
@@ -151,11 +182,6 @@ h2 {
 	background-color: {{ page.slide4-bgColor }};
 	padding-bottom: 150px;
 }	
-
-.page-header {
-	text-align: left;
-	color: #4c4f55;
-}
 
 footer {
 	background-color: {{ page.footer-bgColor }};
