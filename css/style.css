@@ -1,9 +1,10 @@
 ---
-color: '#98A0A8'
+color: '#626262'
 bgColor: '#ffffff'
 
-pub-bgColor: '#3498DB'
-pub-color: '#ffffff'
+pub-bgColor: '#ffffff'
+pub-color: '#626262'
+pub-bdrColor: '#dddddd' 
 
 slide3-bgColor: '#f5f6f6'
 
@@ -38,14 +39,16 @@ html, body {
 }
 
 body {
-	color: {{ page.color }};
 	background-color: {{ page.bgColor }};
+	color: {{ page.color }}
 	font-size: 1.3em;
 	overflow-x: hidden;
 }
 
-body, h1, h2, h3, h4 {
-	font-family: 'Raleway';	
+body, h1, h2, h3, h4, p {
+	font-family: 'Raleway';
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: antialiased
 }
 
 i {
@@ -53,7 +56,7 @@ i {
 }
 
 h1 {
-	font-size: 36px;
+	font-size: 3em;
 }
 
 h2 {
@@ -67,6 +70,8 @@ h2 {
 .navbar {
 	background-color: rgba( 255, 255, 255, .8);
 	border-bottom: 0 none;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 	min-height: 47px;
 }
@@ -76,12 +81,12 @@ h2 {
 }
 
 .slide {
+	padding-top: 20px;
 	padding-bottom: 50px;
 	text-align: center;
 }
 
 .slide-header {
-	padding-top: 20px;
 	padding-bottom: 30px;
 }
 
@@ -118,11 +123,15 @@ h2 {
 
 #slide-pub {
 	background-color: {{ page.pub-bgColor }};
+	color: {{ page.pub-color }};
+	border-top: 0 none;
+	-moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 }
 
-
 #slide-pub h1 {
-	color: {{ page.pub-color }};
+		color: {{ page.pub-color }};
 	text-transform: uppercase;
 	text-align:center;
   	overflow:hidden;
@@ -137,9 +146,9 @@ h2 {
   content: "";
   position: absolute;
   height: 5px;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
-  top: 15px;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+  top: 17px;
   width: 600px;  
 }
 
@@ -152,11 +161,10 @@ h2 {
   margin-left: 15px;
 }
 
-
 .thumbnail {
-	border: 1px solid {{ page.slide2-bgColor }};
+	border: 1px solid {{ page.pub-bdrColor }};
 	padding: 15px 4px 0 4px;
-	background-color: {{ page.slide2-bgColor }};
+	background-color: {{ page.pub-bgColor }};
 }
 
 .thumbnail img {
@@ -169,7 +177,7 @@ h2 {
 
 .thumbnail:hover {
 	border: 1px solid #dddddd;
-	background-color: #eeeeee;
+	background-color: #ffffff;
 }
 
 #slide-3 {
