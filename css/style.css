@@ -6,11 +6,6 @@ pub-bgColor: '#ffffff'
 pub-color: '#626262'
 pub-bdrColor: '#dddddd' 
 
-slide3-bgColor: '#f5f6f6'
-
-slide4-bgColor: '#F5ECD9'
-slide4-color: '#2BACB5'
-
 footer-bgColor: '#202020'
 footer-color: '#ffffff'
 ---
@@ -19,7 +14,6 @@ footer-color: '#ffffff'
  * Author: André Neubauer
  * URL: http://devpg.com
  */
-
 
 * {
 	position: relative;
@@ -67,19 +61,6 @@ a [class^="icon-"] {
 	color: #006567;
 }
 
-.navbar {
-	background-color: rgba( 255, 255, 255, .8);
-	border-bottom: 0 none;
-	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-	min-height: 47px;
-}
-
-.navbar-brand {
-	pading: 12px 40px 12px 12px;
-}
-
 .slide {
 	padding-top: 20px;
 	padding-bottom: 50px;
@@ -120,6 +101,19 @@ a [class^="icon-"] {
 [id*="slide-"] h1 span:after {
   left: 100%;
   margin-left: 15px;
+}
+
+.navbar {
+	background-color: rgba( 255, 255, 255, .8);
+	border-bottom: 0 none;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	min-height: 47px;
+}
+
+.navbar-brand {
+	pading: 12px 40px 12px 12px;
 }
 
 #slide-welcome {
