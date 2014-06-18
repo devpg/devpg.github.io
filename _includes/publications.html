@@ -2,19 +2,17 @@
     <div class="container">
       <h1 class="slide-header"><span>Publications</span></h1>
       
-      <div class="row">
-        {% for talk in site.data.talks %}
-        <div class="col-xs-6 col-sm-4 col-md-3">
-          <div class="thumbnail">
-            <a href="{{ talk.url }}">
-              <img src="images/talks/{{ talk.image }}" alt="{{ talk.title }}">
-              <p>{{ talk.title }}</p>
-            </a>
-            <p><small>{{ talk.date | date: "%b %d, %Y"}} at {{ talk.event }}</small></p>
-          </div>
+      {% for talk in site.data.talks %}
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="thumbnail">
+          <a href="{{ talk.url }}">
+            <img src="images/talks/{{ talk.image }}" alt="{{ talk.title }}">
+            <p>{{ talk.title }}</p>
+          </a>
+          <p><small>{{ talk.date | date: "%b %d, %Y"}} at {{ talk.event }}</small></p>
         </div>
-        {% endfor %}
+      </div>
+      {% endfor %}
 
-      </div><!-- /talks -->
     </div><!-- /container -->
   </div><!-- /slide2 -->
