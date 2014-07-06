@@ -132,6 +132,11 @@ a [class^="icon-"] {
 	padding: 20px;
 }
 
+#slide-bio .slide {
+	background: url('../images/me.jpg');
+	min-height: 200px;
+}
+
 #slide-pub {
 	background-color: {{ page.pub-bgColor }};
 	color: {{ page.pub-color }};
