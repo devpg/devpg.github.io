@@ -62,8 +62,7 @@ a [class^="icon-"] {
 }
 
 .slide {
-	padding-top: 20px;
-	padding-bottom: 50px;
+	padding: 0;
 }
 
 .slide-header {
@@ -116,20 +115,14 @@ a [class^="icon-"] {
 	pading: 12px 40px 12px 12px;
 }
 
-#slide-welcome {
-	background: url('../images/bg.jpg') no-repeat center center fixed;
-	color: #ffffff;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 500px;
-    padding: 0;
-    margin-bottom: 0;
+#slide-welcome .slide {
+	background: url('../images/bg.jpg');
 }
 
-#slide-welcome h1 {
-	padding-top: 130px;
+#slide-welcome h2 {
+	font-style: italic;
+	font-size: 2.5em;
+	color: {{ page.color }};
 }
 
 #message-box {
@@ -137,9 +130,6 @@ a [class^="icon-"] {
 	width: 90%;
 	margin: 300px auto 0;
 	padding: 20px;
-	font-style: italic;
-	font-size: 2.5em;
-	color: {{ page.color }};
 }
 
 #slide-pub {
