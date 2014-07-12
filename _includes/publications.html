@@ -9,15 +9,15 @@
       </header>    
 
       {% for talk in site.data.talks %}
-      <div class="col-xs-6 col-sm-4 col-md-3">
-        <div class="thumbnail">
+      <article class="col-xs-6 col-sm-4 col-md-3">
+        <figure class="thumbnail">
           <a href="{{ talk.url }}">
             <img src="images/talks/{{ talk.image }}" alt="{{ talk.title }}">
-            <p>{{ talk.title }}</p>
+            <h3>{{ talk.title }}</h3>
           </a>
-          <p><small>{{ talk.date | date: "%b %d, %Y"}} at {{ talk.event }}</small></p>
-        </div>
-      </div>
+          <p><small><time>{{ talk.date | date: "%b %d, %Y"}}</time> at {{ talk.event }}</small></p>
+        </figure>
+      </article>
       {% endfor %}
 
     </div>

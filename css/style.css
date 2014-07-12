@@ -51,6 +51,10 @@ h2 {
 	font-size: 2em;
 }
 
+h3 {
+	font-size: 1.4em;
+}
+
 a [class^="icon-"] {
 	text-decoration: none;
 }
@@ -124,7 +128,7 @@ header h1 span:after {
 }
 
 /* WELCOME */
-#slide-welcome .slide {
+#slide-welcome section {
 	background: url('../images/bg.jpg');
 }
 
