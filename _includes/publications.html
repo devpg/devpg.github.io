@@ -15,7 +15,7 @@
             <img src="images/talks/{{ talk.image }}" alt="{{ talk.title }}">
             <h3>{{ talk.title }}</h3>
           </a>
-          <p><small><time>{{ talk.date | date: "%b %d, %Y"}}</time> at {{ talk.event }}</small></p>
+          <p><time>{{ talk.date | date: "%b %d, %Y"}}</time> at {{ talk.event }}</p>
         </figure>
       </article>
       {% endfor %}

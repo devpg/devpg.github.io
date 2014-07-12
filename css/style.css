@@ -194,7 +194,8 @@ section header h1 span:after {
 	border: 1px solid #eeeeee;
 }
 
-#slide-pub .thumbnail p {
+#slide-pub .thumbnail p,
+#slide-pub .thumbnail h3 {
 	margin-top: 10px;
 	text-align: center;
 }
