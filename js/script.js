@@ -1,22 +1,12 @@
 jQuery(document).ready(function ($) {
-	$('#slide-welcome section').height($(window).height()+50);
-	$(window).resize(function(){
-		$('#slide-welcome section').height($(window).height());
-	});
-
+	resizePage();
+	adjustThumbnailHeight(); 
 	skrollr.init();
-	equalHeight($(".thumbnail")); 
 
-	function equalHeight(group) {    
-	  tallest = 0;    
-	  group.each(function() {       
-	    thisHeight = $(this).height();       
-	    if(thisHeight > tallest) {          
-	      tallest = thisHeight;       
-	    }    
-	  });    
-	  group.each(function() { $(this).height(tallest); });
-	}
+	// Reload on resize
+	$(window).bind('resize', function () {
+		resizePage();
+	});
 
 	//Cache some variables
 	var links = $('.nav').find('li');
@@ -43,3 +33,21 @@ jQuery(document).ready(function ($) {
 		}, 1500);
 	}
 });
+
+function adjustThumbnailHeight() {    
+	group = $(".thumbnail");
+	tallest = 0;
+	group.each(function() {       
+		thisHeight = $(this).height();       
+		if(thisHeight > tallest) {          
+			tallest = thisHeight;       
+		}    
+	});    
+	group.each(function() { $(this).height(tallest); });
+}
+
+function resizePage() {
+    $('#background').css({ 'width': $(window).width() });
+    $('#background').css({ 'height': $(window).height() });
+    $('#slide-welcome').css({ 'height': $(window).height() });
+}

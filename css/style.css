@@ -1,12 +1,11 @@
 ---
 color: '#626262'
-bgColor: '#ffffff'
 
 pub-bgColor: '#ffffff'
 pub-color: '#626262'
 pub-bdrColor: '#dddddd' 
 
-footer-bgColor: '#202020'
+footer-bgColor: 'rgba(255, 255, 255, .8)'
 footer-color: '#ffffff'
 ---
 
@@ -25,22 +24,44 @@ html, body {
 }
 
 body {
-	background-color: {{ page.bgColor }};
-	color: {{ page.color }}
+	color: {{ page.color }};
 	font-size: 1.3em;
 	overflow-x: hidden;
+}
+
+header#background {
+	background: url('../images/bg.jpg') no-repeat top center;
+	position: fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	z-index: 1;
+}
+
+main {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 2;
+}
+
+footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+	background-color: {{ page.footer-bgColor }};
+	padding-top: 15px;
 }
 
 body, h1, h2, h3, h4, p {
 	font-family: 'Raleway';
 	text-rendering: optimizelegibility;
 	-webkit-font-smoothing: antialiased
-}
-
-footer {
-	background-color: {{ page.footer-bgColor }};
-	color: {{ page.footer-color }};
-	padding-bottom: 10px;
 }
 
 h1 {
@@ -75,24 +96,24 @@ section {
 	padding: 0;
 }
 
-header {
+section header {
 	padding-bottom: 30px;
 }
 
-header h1 span {
+section header h1 span {
   display:inline-block;
   position:relative;
 }
 
-header h1 {
+section header h1 {
 	color: {{ page.pub-color }};
 	text-transform: uppercase;
 	text-align:center;
   	overflow:hidden;
 }
 
-header h1 span:after, 
-header h1 span:before {
+section header h1 span:after, 
+section header h1 span:before {
   content: "";
   position: absolute;
   height: 5px;
@@ -102,12 +123,12 @@ header h1 span:before {
   width: 600px;  
 }
 
-header h1 span:before {
+section header h1 span:before {
   right: 100%;
   margin-right: 15px;
 }
 
-header h1 span:after {
+section header h1 span:after {
   left: 100%;
   margin-left: 15px;
 }
@@ -115,11 +136,8 @@ header h1 span:after {
 
 /* NAVIGATION */
 .navbar {
-	background-color: rgba( 255, 255, 255, .8);
+	background-color: rgba( 255, 255, 255, .9);
 	border-bottom: 0 none;
-	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 	min-height: 47px;
 }
 
@@ -128,8 +146,10 @@ header h1 span:after {
 }
 
 /* WELCOME */
-#slide-welcome section {
-	background: url('../images/bg.jpg');
+#slide-welcome {
+	min-height: 500px;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 #slide-welcome h2 {
@@ -147,6 +167,10 @@ header h1 span:after {
 
 
 /* ABOUT ME */
+#slide-bio {
+	background-color: rgba( 255, 255, 255, .9);
+}
+
 #slide-bio section {
 	background: url('../images/me.jpg');
 	min-height: 250px;
@@ -158,9 +182,6 @@ header h1 span:after {
 	background-color: {{ page.pub-bgColor }};
 	color: {{ page.pub-color }};
 	border-top: 0 none;
-	-moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-	-webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-	box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 }
 
 #slide-pub .thumbnail {
