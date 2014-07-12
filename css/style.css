@@ -37,6 +37,12 @@ body, h1, h2, h3, h4, p {
 	-webkit-font-smoothing: antialiased
 }
 
+footer {
+	background-color: {{ page.footer-bgColor }};
+	color: {{ page.footer-color }};
+	padding-bottom: 10px;
+}
+
 h1 {
 	font-size: 3em;
 }
@@ -102,6 +108,8 @@ a [class^="icon-"] {
   margin-left: 15px;
 }
 
+
+/* NAVIGATION */
 .navbar {
 	background-color: rgba( 255, 255, 255, .8);
 	border-bottom: 0 none;
@@ -115,6 +123,7 @@ a [class^="icon-"] {
 	pading: 12px 40px 12px 12px;
 }
 
+/* WELCOME */
 #slide-welcome .slide {
 	background: url('../images/bg.jpg');
 }
@@ -132,11 +141,15 @@ a [class^="icon-"] {
 	padding: 20px;
 }
 
+
+/* ABOUT ME */
 #slide-bio .slide {
 	background: url('../images/me.jpg');
 	min-height: 250px;
 }
 
+
+/* PUBLICATIONS */
 #slide-pub {
 	background-color: {{ page.pub-bgColor }};
 	color: {{ page.pub-color }};
@@ -166,6 +179,7 @@ a [class^="icon-"] {
 	background-color: #ffffff;
 }
 
+/* CONTACT */
 #slide-contact {
 	background-color: {{ page.footer-bgColor }};
 	color: {{ page.footer-color }};	
@@ -177,10 +191,4 @@ a [class^="icon-"] {
 
 #slide-contact ul {
 	list-style-type: none;
-}
-
-footer {
-	background-color: {{ page.footer-bgColor }};
-	color: {{ page.footer-color }};
-	padding-bottom: 10px;
 }
