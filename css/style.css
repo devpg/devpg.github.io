@@ -67,7 +67,7 @@ a [class^="icon-"] {
 	color: #006567;
 }
 
-.slide {
+section {
 	padding: 0;
 }
 
@@ -143,7 +143,7 @@ header h1 span:after {
 
 
 /* ABOUT ME */
-#slide-bio .slide {
+#slide-bio section {
 	background: url('../images/me.jpg');
 	min-height: 250px;
 }
