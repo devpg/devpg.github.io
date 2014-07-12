@@ -1,11 +1,11 @@
 ---
 color: '#626262'
 
-pub-bgColor: '#ffffff'
+pub-bgColor: 'rgba(255, 255, 255, .9)'
 pub-color: '#626262'
 pub-bdrColor: '#dddddd' 
 
-footer-bgColor: 'rgba(255, 255, 255, .8)'
+footer-bgColor: 'rgba(255, 255, 255, .9)'
 footer-color: '#ffffff'
 ---
 
@@ -208,6 +208,7 @@ section header h1 span:after {
 #slide-contact {
 	background-color: {{ page.footer-bgColor }};
 	color: {{ page.footer-color }};	
+	margin-bottom: 8px;
 }
 
 #slide-contact [class*="icon-"] {
