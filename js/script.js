@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
-	$('#slide-welcome .slide').height($(window).height()+50);
+	$('#slide-welcome section').height($(window).height()+50);
 	$(window).resize(function(){
-		$('#slide-welcome .slide').height($(window).height());
+		$('#slide-welcome section').height($(window).height());
 	});
 
 	skrollr.init();
@@ -20,9 +20,6 @@ jQuery(document).ready(function ($) {
 
 	//Cache some variables
 	var links = $('.nav').find('li');
-	slide = $('.slide');
-	button = $('.button');
-	mywindow = $(window);
 	htmlbody = $('html,body');
 	
 	//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
