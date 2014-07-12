@@ -71,24 +71,24 @@ a [class^="icon-"] {
 	padding: 0;
 }
 
-.slide-header {
+header {
 	padding-bottom: 30px;
 }
 
-[id*="slide-"] h1 {
+header h1 span {
+  display:inline-block;
+  position:relative;
+}
+
+header h1 {
 	color: {{ page.pub-color }};
 	text-transform: uppercase;
 	text-align:center;
   	overflow:hidden;
 }
 
-section h1 span {
-  display:inline-block;
-  position:relative;
-}
-
-section h1 span:after, 
-[id*="slide-"] h1 span:before {
+header h1 span:after, 
+header h1 span:before {
   content: "";
   position: absolute;
   height: 5px;
@@ -98,12 +98,12 @@ section h1 span:after,
   width: 600px;  
 }
 
-section h1 span:before {
+header h1 span:before {
   right: 100%;
   margin-right: 15px;
 }
 
-section h1 span:after {
+header h1 span:after {
   left: 100%;
   margin-left: 15px;
 }
