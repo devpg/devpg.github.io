@@ -82,12 +82,12 @@ a [class^="icon-"] {
   	overflow:hidden;
 }
 
-[id*="slide-"] h1 span {
+section h1 span {
   display:inline-block;
   position:relative;
 }
 
-[id*="slide-"] h1 span:after, 
+section h1 span:after, 
 [id*="slide-"] h1 span:before {
   content: "";
   position: absolute;
@@ -98,12 +98,12 @@ a [class^="icon-"] {
   width: 600px;  
 }
 
-[id*="slide-"] h1 span:before {
+section h1 span:before {
   right: 100%;
   margin-right: 15px;
 }
 
-[id*="slide-"] h1 span:after {
+section h1 span:after {
   left: 100%;
   margin-left: 15px;
 }
