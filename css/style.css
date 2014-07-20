@@ -46,6 +46,7 @@ main {
 	left: 0;
 	overflow: hidden;
 	z-index: 2;
+	padding-bottom: 23px;
 }
 
 footer {
@@ -55,7 +56,7 @@ footer {
 	left: 0;
 	z-index: 3;
 	background-color: {{ page.footer-bgColor }};
-	padding-top: 15px;
+	padding: 5px;
 }
 
 body, h1, h2, h3, h4, p {
