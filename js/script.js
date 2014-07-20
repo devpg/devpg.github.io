@@ -26,10 +26,12 @@ jQuery(document).ready(function ($) {
 	//Create a function that will be passed a slide number and then will scroll to that slide using jquerys animate. The Jquery
 	//easing plugin is also used, so we passed in the easing method of 'easeInOutQuint' which is available throught the plugin.
 	function goToByScroll(dataslide) {
-		var offset_top = $('#slide-' + dataslide).offset().top;
-		
+		var navHeight = $('.navbar').height();
+		var targetTopPos = $('#slide-' + dataslide).offset().top;
+		var scrollToPos = targetTopPos - navHeight;
+
 		htmlbody.stop(false, false).animate({
-			scrollTop: offset_top
+			scrollTop: scrollToPos
 		}, 1500);
 	}
 });
