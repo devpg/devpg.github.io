@@ -167,12 +167,6 @@ section#background {
 	background-color: rgba( 255, 255, 255, .9);
 }
 
-#slide-bio-header {
-	background: url('../images/me.jpg');
-	min-height: 250px;
-}
-
-
 /* PUBLICATIONS */
 #slide-pub {
 	background-color: {{ page.pub-bgColor }};
