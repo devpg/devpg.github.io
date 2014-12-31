@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
 	resizePage();
-	adjustThumbnailHeight(); 
+	//adjustThumbnailHeight(); 
 	skrollr.init();
 
 	// Reload on resize
@@ -35,18 +35,6 @@ jQuery(document).ready(function ($) {
 		}, 1500);
 	}
 });
-
-function adjustThumbnailHeight() {    
-	group = $(".thumbnail");
-	tallest = 0;
-	group.each(function() {       
-		thisHeight = $(this).height();       
-		if(thisHeight > tallest) {          
-			tallest = thisHeight;       
-		}    
-	});    
-	group.each(function() { $(this).height(tallest); });
-}
 
 function resizePage() {
     $('#background').css({ 'width': $(window).width() });
