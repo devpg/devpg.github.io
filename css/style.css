@@ -179,6 +179,7 @@ section#background {
 	border: 1px solid {{ page.pub-bdrColor }};
 	padding: 15px 4px 0 4px;
 	background-color: {{ page.pub-bgColor }};
+	height: 290px;
 }
 
 #slide-pub .thumbnail img {
