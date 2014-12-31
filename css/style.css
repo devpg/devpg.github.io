@@ -215,3 +215,14 @@ section#background {
 .icon-xing {
 	color: #006567;
 }
+
+.white {
+	background-color: #fff;
+}
+
+@media (max-width: 992px) {
+	.noBorderOnSmallScreens {
+		margin: 0 !important;
+		padding: 0 !important;		
+	}
+}
