@@ -174,7 +174,10 @@ section#background {
 	border: 0;
 	padding: 15px 4px 0 4px;
 	height: 290px;
-
+	border-radius: 0;
+	-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
 }
 
 #slide-pub .thumbnail img {
