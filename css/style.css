@@ -1,12 +1,8 @@
 ---
 color: '#626262'
+bgColor: 'rgba(255, 255, 255, .9)'
+bdrColor: '#ddd'
 
-pub-bgColor: 'rgba(255, 255, 255, .9)'
-pub-color: '#626262'
-pub-bdrColor: '#dddddd' 
-
-footer-bgColor: 'rgba(255, 255, 255, .9)'
-footer-color: '#ffffff'
 ---
 
 /*
@@ -75,7 +71,7 @@ footer {
 	bottom: 0;
 	left: 0;
 	z-index: 3;
-	background-color: {{ page.footer-bgColor }};
+	background-color: {{ page.bgColor }};
 	padding: 5px;
 }
 
@@ -93,7 +89,7 @@ section header h1 span {
 }
 
 section header h1 {
-	color: {{ page.pub-color }};
+	color: {{ page.color }};
 	text-transform: uppercase;
 	text-align:center;
   	overflow:hidden;
@@ -104,8 +100,8 @@ section header h1 span:before {
   content: "";
   position: absolute;
   height: 5px;
-  border-bottom: 1px solid #dddddd;
-  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid {{ page.bdrColor }};
+  border-top: 1px solid {{ page.bdrColor }};
   top: 17px;
   width: 600px;  
 }
@@ -132,7 +128,7 @@ section#background {
 
 /* NAVIGATION */
 .navbar {
-	background-color: rgba( 255, 255, 255, .9);
+	background-color: {{ page.bgColor }};
 	border-bottom: 0 none;
 	min-height: 47px;
 	font-size: 16px;
@@ -156,7 +152,7 @@ section#background {
 }
 
 #message-box {
-	background: rgba(255, 255, 255, .8);
+	background-color: {{ page.bgColor }};
 	width: 90%;
 	margin: 300px auto 0;
 	padding: 20px;
@@ -165,21 +161,20 @@ section#background {
 
 /* ABOUT ME */
 #slide-bio {
-	background-color: rgba( 255, 255, 255, .9);
+	background-color: {{ page.bgColor }};
 }
 
 /* PUBLICATIONS */
 #slide-pub {
-	background-color: {{ page.pub-bgColor }};
-	color: {{ page.pub-color }};
+	background-color: {{ page.bgColor }};
 	border-top: 0 none;
 }
 
 #slide-pub .thumbnail {
-	border: 1px solid {{ page.pub-bdrColor }};
+	border: 0;
 	padding: 15px 4px 0 4px;
-	background-color: {{ page.pub-bgColor }};
 	height: 290px;
+
 }
 
 #slide-pub .thumbnail img {
@@ -192,15 +187,9 @@ section#background {
 	text-align: center;
 }
 
-#slide-pub .thumbnail:hover {
-	border: 1px solid #dddddd;
-	background-color: #ffffff;
-}
-
 /* CONTACT */
 #slide-contact {
-	background-color: {{ page.footer-bgColor }};
-	color: {{ page.footer-color }};	
+	background-color: {{ page.bgColor }};
 	margin-bottom: 8px;
 }
 
