@@ -154,7 +154,7 @@ section#background {
 #message-box {
 	background-color: {{ page.bgColor }};
 	width: 90%;
-	margin: 300px auto 0;
+	margin: 30% auto 0;
 	padding: 20px;
 }
 
