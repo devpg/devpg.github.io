@@ -43,7 +43,7 @@ h3 {
 	font-size: 1.4em;
 }
 
-p {
+p,li {
 	font-size: 16px;
 }
 
@@ -162,6 +162,17 @@ section#background {
 /* ABOUT ME */
 #slide-bio {
 	background-color: {{ page.bgColor }};
+}
+
+/* BLOG */
+#slide-blog {
+	margin-top: 50px;
+	padding-bottom: 30px;
+	background-color: {{ page.bgColor }};
+}
+
+#slide-blog ul {
+	list-style-type: none;
 }
 
 /* PUBLICATIONS */
