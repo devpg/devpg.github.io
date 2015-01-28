@@ -164,6 +164,13 @@ section#background {
 	background-color: {{ page.bgColor }};
 }
 
+/* BLOG */
+#slide-blog {
+	margin-top: 50px;
+	padding-bottom: 30px;
+	background-color: {{ page.bgColor }};
+}
+
 /* PUBLICATIONS */
 #slide-pub {
 	background-color: {{ page.bgColor }};

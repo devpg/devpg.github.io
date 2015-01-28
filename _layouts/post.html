@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<section id="slide-blog" data-slide="blog">
+	<div class="container" 
+      data-center="opacity: 1"
+      data--100-bottom="opacity: 0"
+      data-anchor-target="#slide-blog h1">
+
+    	<header>
+        	<h1><span>{{ page.title }}</span></h1>
+      	</header>
+
+      	<small>{{ page.date | date_to_string }}</small>
+      	<p>{{ content }}</p>
+    </div>
+ </section>
+
