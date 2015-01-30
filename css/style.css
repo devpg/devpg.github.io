@@ -165,13 +165,17 @@ section#background {
 }
 
 /* BLOG */
-#slide-blog {
+#slide-blog, #slide-blog-archive, #slide-blog-post {
 	margin-top: 50px;
 	padding-bottom: 30px;
 	background-color: {{ page.bgColor }};
 }
 
-#slide-blog ul {
+#slide-blog {
+
+}
+
+#slide-blog-archive ul {
 	list-style-type: none;
 }
 
