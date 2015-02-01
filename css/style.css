@@ -77,6 +77,7 @@ footer {
 
 section {
 	padding: 0;
+	background-color: {{ page.bgColor }};
 }
 
 section header {
@@ -116,7 +117,7 @@ section header h1 span:after {
   margin-left: 15px;
 }
 
-section#background {
+div#background {
 	background: url('../images/bg.jpg') no-repeat top center;
 	position: fixed;
 	background-size: cover;
@@ -140,6 +141,7 @@ section#background {
 
 /* WELCOME */
 #slide-welcome {
+	background: none !important;
 	min-height: 500px;
     padding: 0;
     margin-bottom: 0;
@@ -158,25 +160,15 @@ section#background {
 	padding: 20px;
 }
 
-
-/* ABOUT ME */
-#slide-bio {
-	background-color: {{ page.bgColor }};
+/* BLOG (types: section, blog post, blog archive) */
+#slide-blog ul, #slide-blog-archive ul {
+	list-style-type: none;
 }
 
-/* BLOG */
-#slide-blog, #slide-blog-archive, #slide-blog-post {
+#slide-blog-archive, #slide-blog-post {
 	margin-top: 50px;
 	padding-bottom: 30px;
 	background-color: {{ page.bgColor }};
-}
-
-#slide-blog {
-
-}
-
-#slide-blog-archive ul {
-	list-style-type: none;
 }
 
 /* PUBLICATIONS */
