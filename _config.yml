@@ -10,10 +10,8 @@ logo: /assets/img/AndreNeubauer_sm.jpg
 
 paginate: 5
 paginate_path: "blog/page:num"
-markdown: kramdown
 
 remote_theme: devpg/minimal
-
 color-scheme: dark
 
 plugins:
