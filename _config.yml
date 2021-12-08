@@ -5,6 +5,8 @@ markdown: kramdown
 
 remote_theme: devpg/minimal
 
+color-scheme: auto-default-dark
+
 plugins:
   - jekyll-remote-theme
   - jekyll-paginate
