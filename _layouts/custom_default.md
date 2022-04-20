@@ -38,9 +38,8 @@
 
       </section>
       <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Credits to <a href="https://github.com/orderedlist">orderedlist</a>, <a href="https://github.com/godalming123">godalming123</a>, <a href="https://github.com/jekyll/minima">minima</a> </small></p>
+        <p><small>Hosted on GitHub Pages &mdash; Credits to <a href="https://github.com/godalming123">godalming123 (Basic theme)</a>, <a href="https://github.com/jekyll/minima">minima (Icons)</a> </small></p>
       </footer>
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
