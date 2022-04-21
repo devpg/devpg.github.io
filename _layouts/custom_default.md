@@ -24,7 +24,6 @@
     <div class="wrapper">
       <header>
         <p><img src="{{site.logo | relative_url}}" alt="Logo" /></p>
-
         <p class="social-media-list">
             <a rel="me" href="https://www.linkedin.com/in/andreneubauer/" target="_blank" title="André Neubauer (LinkedIn)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg></a>
             <a rel="me" href="https://hmze.podbean.com/" target="_blank" title="HMZE (Podcast)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#podcast' | relative_url }}"></use></svg></a>
@@ -32,12 +31,9 @@
             <a rel="me" href="https://twitter.com/devpg" target="_blank" title="devpg (Twitter)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg></a>
             <a rel="me" href="https://github.com/devpg" target="_blank" title="devpg (Github)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg></a>
         </p>
-
       </header>
       <section>
-
-      {{ content }}
-
+        {{ content }}
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Credits to <a href="https://github.com/godalming123">godalming123 (Basic theme)</a>, <a href="https://github.com/jekyll/minima">minima (Icons)</a> </small></p>
