@@ -1,7 +1,8 @@
-/**
- * Icons
- */
+body {
+  font: 14px/1.5 Helvetica, sans-serif;
+}
 
+/* Icons */
  .social-media-list {
     text-align: center;
   }
