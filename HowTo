@@ -1,0 +1,12 @@
+-- INSTALLATION --
+
+1. Install rbenv (https://github.com/rbenv/rbenv)
+2. Install ruby 3.1.2
+3. Set ruby 3.1.2 environment for this project
+4. Install Jekyll (gem install jekyll)
+5. Install bundle (bundle install)
+6. Add webrick (bundle add webrick)
+
+-- FROM HERE YOU ONLY NEED TO RUN --
+
+bundle exec jekyll serve --incremental
