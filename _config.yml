@@ -10,15 +10,8 @@ story: |
   Don't hesitate to reach out to me. I'm always open for a chat.
 
 logo: /assets/img/AndreNeubauer_sm.jpg
-
-paginate: 5
-paginate_path: "blog/page:num"
-
 remote_theme: devpg/minimal
 color-scheme: dark
 
 plugins:
   - jekyll-remote-theme
-  - jekyll-paginate
-  - jekyll-remote-theme
-  - jekyll-include-cache
