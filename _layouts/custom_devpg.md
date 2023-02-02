@@ -5,6 +5,13 @@
     {% assign ColorScheme = site.color-scheme %}
 {% endcase %}
 
+{% case page.logo %}
+  {% when "", nil, false, 0, empty %}
+    {% assign logo = site.logo %}
+  {% else %}
+    {% assign logo = page.logo %}
+{% endcase %}
+
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
@@ -23,7 +30,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <p id=hero-image><img src="{{site.logo | relative_url}}" alt="Logo" /></p>
+        <p id=hero-image><img src="{{logo | relative_url}}" alt="Logo" /></p>
         <p class="social-media-list">
             <a rel="me" href="https://www.linkedin.com/in/andreneubauer/" target="_blank" title="André Neubauer (LinkedIn)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg></a>
             <a rel="me" href="https://hmze.podbean.com/" target="_blank" title="HMZE (Podcast)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#podcast' | relative_url }}"></use></svg></a>
