@@ -1,5 +1,5 @@
 ---
-layout: custom_default
+layout: custom_devpg
 ---
 
 {{ site.story }}
