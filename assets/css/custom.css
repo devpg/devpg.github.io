@@ -16,3 +16,7 @@ body {
     vertical-align: text-bottom;
     transform: scale(1.5);
   }
+
+  #hero-image {
+    text-align: center;
+  }
