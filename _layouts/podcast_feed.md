@@ -14,11 +14,11 @@
     <generator>{{ page.url | absolute_url }}</generator>
     <itunes:type>episodic</itunes:type>
     <image>
-      <url>{{ page.logo_url | absolute_url }}</url>
+      <url>{{ page.logo | absolute_url }}</url>
       <title>{{ page.title }}</title>
       <link>{{ page.url | absolute_url }}</link>
     </image>
-    <itunes:image href="{{ page.logo_url | absolute_url }}"/>
+    <itunes:image href="{{ page.logo | absolute_url }}"/>
     <itunes:subtitle/>
     <itunes:author>{{ page.feed_owner}}</itunes:author>
     <itunes:explicit>no</itunes:explicit>

@@ -11,7 +11,7 @@ layout: podcast_feed
     <link>{{ post.url | absolute_url }}</link>
     <guid isPermaLink="false"></guid>
     <content:encoded><![CDATA[{{ post.content }}]]></content:encoded>
-    <itunes:image href="{{ page.logo_url | absolute_url }}"/>
+    <itunes:image href="{{ page.logo | absolute_url }}"/>
     <itunes:episode>{{ post.episode }}</itunes:episode>
     <itunes:episodeType>full</itunes:episodeType>
     <itunes:subtitle/>

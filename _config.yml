@@ -28,6 +28,6 @@ defaults:
       feed_lang: de
       feed_since: 
       feed_last:
-      logo_url: hmze/logo.jpeg
+      logo: hmze/logo.jpeg
       feed_owner: Andreas Wolff, Sebastian Heide-Meyer zu Erpen und André Neubauer
       feed_contact: hmze_podcast@googlemail.com
