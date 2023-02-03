@@ -22,16 +22,6 @@ body {
 }
 
 ol {
-  counter-reset: list;
-}
-
-ol>li {
   list-style: none;
-  position: relative;
-  left: -1.4em;
-}
-
-ol>li:before {
-  content: "[" counter(list) "] ";
-  counter-increment: list;
+  margin-left: -1.4em;
 }
