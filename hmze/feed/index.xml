@@ -4,8 +4,8 @@ layout: podcast_feed
 
 {% for post in site.categories["hmze"] %}
   <item>
-    <title>{{ post.title }}</title>
-    <itunes:title>{{ post.title }}</itunes:title>
+    <title>{{ post.title | escape }}</title>
+    <itunes:title>{{ post.title | escape }}</itunes:title>
     <description>{{ post.content | strip_html }}</description>
     <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M %z" }}</pubDate>
     <link>{{ post.url | absolute_url }}</link>
