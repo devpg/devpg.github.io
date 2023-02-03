@@ -3,20 +3,35 @@ body {
 }
 
 /* Icons */
- .social-media-list {
-    text-align: center;
-  }
-  
-  .svg-icon {
-    width: 36px;
-    height: 16px;
-    display: inline-block;
-    fill: currentColor;
-    padding: 5px 3px 2px 5px;
-    vertical-align: text-bottom;
-    transform: scale(1.5);
-  }
+.social-media-list {
+  text-align: center;
+}
 
-  #hero-image {
-    text-align: center;
-  }
+.svg-icon {
+  width: 36px;
+  height: 16px;
+  display: inline-block;
+  fill: currentColor;
+  padding: 5px 3px 2px 5px;
+  vertical-align: text-bottom;
+  transform: scale(1.5);
+}
+
+#hero-image {
+  text-align: center;
+}
+
+ol {
+  counter-reset: list;
+}
+
+ol>li {
+  list-style: none;
+  position: relative;
+  left: -1.4em;
+}
+
+ol>li:before {
+  content: "[" counter(list) "] ";
+  counter-increment: list;
+}
