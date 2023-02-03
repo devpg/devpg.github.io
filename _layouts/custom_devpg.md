@@ -32,8 +32,9 @@
       <header>
         <p id=hero-image><img src="{{logo | relative_url}}" alt="Logo" /></p>
         <p class="social-media-list">
+            <a rel="me" href="/" title="Home"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#home' | relative_url }}"></use></svg></a>
             <a rel="me" href="https://www.linkedin.com/in/andreneubauer/" target="_blank" title="André Neubauer (LinkedIn)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg></a>
-            <a rel="me" href="https://hmze.podbean.com/" target="_blank" title="HMZE (Podcast)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#podcast' | relative_url }}"></use></svg></a>
+            <a rel="me" href="/hmze" title="HMZE (Podcast)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#podcast' | relative_url }}"></use></svg></a>
             <a rel="me" href="https://speakerdeck.com/devpg" target="_blank" title="devpg (speakerdeck)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#speakerdeck' | relative_url }}"></use></svg></a>
         </p>
       </header>
