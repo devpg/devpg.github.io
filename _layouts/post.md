@@ -2,8 +2,9 @@
 layout: custom_devpg
 ---
 
-{{ page.date | date: "%-d %B %Y" }}
 <h1>{{ page.title }}</h1>
+<p>{{ page.date | date: "%-d %B %Y" }}</p>
+
 
 <p>
   <audio controls>
