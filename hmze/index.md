@@ -2,6 +2,15 @@
 layout: custom_devpg
 ---
 
+{{ page.description }}
+<p>
+  <span><a href="https://open.spotify.com/show/4z2WgPzv2tXcYMHcmdnwVZ" target="_blank">Spotify</a></span> //
+  <span><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkLnBvZGJlYW4uY29tL2htemUvZmVlZC54bWw" target="_blank">Google Podcasts</a></span> //
+  <span>Apple Podcast</span> //
+  <span><a href="{{ page.feed_url | absolute_url }}">RSS Feed</a></span>
+</p>
+--
+
 {% for post in site.categories["hmze"] %}
   {% assign currentYear = post.date | date: "%Y" %}
   {% assign currentMonth = post.date | date: "%B" %}
