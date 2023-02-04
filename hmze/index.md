@@ -9,17 +9,13 @@ layout: custom_devpg
   <span>Apple Podcast</span> //
   <span><a href="{{ page.feed_url | absolute_url }}" target="_blank">RSS Feed</a></span>
 </p>
---
 
 {% for post in site.categories["hmze"] %}
   {% assign currentYear = post.date | date: "%Y" %}
   {% assign currentMonth = post.date | date: "%B" %}
   
   {% if currentYear != year %}
-  {% if year != nil %}
-    {% assign section = "next-section" %}
-  {% endif %}
-  <h1 id="{{ currentYear }}" class="{{ section }}">{{ currentYear }}</h1>
+  <h1 id="{{ currentYear }}" class="section">{{ currentYear }}</h1>
   {% assign year = currentYear %}
   {% endif %}
   
