@@ -7,7 +7,10 @@ layout: custom_devpg
   {% assign currentMonth = post.date | date: "%B" %}
   
   {% if currentYear != year %}
-  <h1 id="{{ currentYear }}">{{ currentYear }}</h1>
+  {% if year != nil %}
+    {% assign section = "next-section" %}
+  {% endif %}
+  <h1 id="{{ currentYear }}" class="{{ section }}">{{ currentYear }}</h1>
   {% assign year = currentYear %}
   {% endif %}
   
