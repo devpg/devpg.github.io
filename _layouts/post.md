@@ -3,7 +3,14 @@ layout: custom_devpg
 ---
 
 <h1>{{ page.title }}</h1>
-<p>{{ page.date | date: "%-d %B %Y" }}</p>
+<p>
+  {{ page.date | date: "%d %B %Y" }}
+  {% case page.tags %}
+  {% when "", nil, false, 0, empty %}
+  {% else %}
+    <span id=tags> // {{ page.tags | join: " " }}</span>
+{% endcase %}
+</p>
 
 
 <p>
@@ -14,9 +21,3 @@ layout: custom_devpg
 </p>
 
 {{content}}
-
-{% case page.tags %}
-  {% when "", nil, false, 0, empty %}
-  {% else %}
-    <small>tags: {{ page.tags | join: " " }}</small>
-{% endcase %}
