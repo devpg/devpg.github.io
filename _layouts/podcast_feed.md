@@ -23,12 +23,9 @@
     <itunes:author>{{ page.feed_owner}}</itunes:author>
     <itunes:explicit>no</itunes:explicit>
     <itunes:keywords></itunes:keywords>
-    <itunes:category text="Business"/>
-    <itunes:category text="Business">
-      <itunes:category text="Marketing"/>
-    </itunes:category>
-    <itunes:category text="Business">
-      <itunes:category text="Entrepreneurship"/>
+    <itunes:category text="Technology"/>
+    <itunes:category text="News">
+      <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:summary>{{ page.description }}</itunes:summary>
     <itunes:owner>
