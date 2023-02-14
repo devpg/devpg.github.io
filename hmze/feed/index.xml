@@ -9,7 +9,7 @@ layout: podcast_feed
     <description>{{ post.content | strip_html | escape }}</description>
     <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M %z" }}</pubDate>
     <link>{{ post.url | absolute_url }}</link>
-    <guid isPermaLink="false"></guid>
+    <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
     <content:encoded><![CDATA[{{ post.content }}]]></content:encoded>
     <itunes:image href="{{ page.logo | absolute_url }}"/>
     <itunes:episode>{{ post.episode }}</itunes:episode>
