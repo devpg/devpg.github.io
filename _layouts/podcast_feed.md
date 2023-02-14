@@ -10,13 +10,13 @@
     <pubDate>{{ page.feed_since }}</pubDate>
     <lastBuildDate>{{ page.feed_last }}</lastBuildDate>
     <description>{{ page.description }}</description>
-    <link>{{ page.url | absolute_url }}</link>
-    <generator>{{ page.url | absolute_url }}</generator>
+    <link>{{ page.website_url | absolute_url }}</link>
+    <generator>{{ page.website_url | absolute_url }}</generator>
     <itunes:type>episodic</itunes:type>
     <image>
       <url>{{ page.logo | absolute_url }}</url>
       <title>{{ page.title }}</title>
-      <link>{{ page.url | absolute_url }}</link>
+      <link>{{ page.website_url | absolute_url }}</link>
     </image>
     <itunes:image href="{{ page.logo | absolute_url }}"/>
     <itunes:subtitle/>

@@ -21,7 +21,7 @@ defaults:
     scope:
       path: "hmze"
     values:
-      url: hmze/
+      website_url: hmze/
       title: HMZE
       description: In diesem Podcast unterhalten sich Andreas Wolff, Sebastian Heide-Meyer zu Erpen und André Neubauer über Technologie und Leadership, denn ”Technology is a People Business”.
       feed_url: hmze/feed/
