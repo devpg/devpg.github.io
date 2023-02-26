@@ -30,6 +30,10 @@ layout: custom_devpg
     <p>
       <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url={{content_piece.url}}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
     </p>
+  {% when 'buzzsprout' %}
+    <p>
+      <iframe src="{{content_piece.url}}?client_source=small_player&iframe=true" loading="lazy" width="100%" height="200" frameborder="0" scrolling="no" title="The Story of Software, 10. The Evolution of Software Architecture"></iframe>
+    </p>
   {% when 'audio' %}
     <p><audio controls>
       <source src="{{content_piece.url}}" type="audio/mpeg">
