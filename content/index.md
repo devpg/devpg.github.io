@@ -1,5 +1,5 @@
 ---
-layout: custom_devpg
+layout: custom
 ---
 
 {% for post in site.categories["content"] %}

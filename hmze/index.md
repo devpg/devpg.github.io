@@ -1,5 +1,5 @@
 ---
-layout: custom_hmze
+layout: custom
 ---
 
 {{ page.description }}

@@ -1,3 +1,7 @@
+---
+layout: custom
+---
+
 <h1>{{ page.title }}</h1>
 <p>
   {{ page.date | date: "%d %B %Y" }}

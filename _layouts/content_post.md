@@ -1,5 +1,5 @@
 ---
-layout: custom_devpg
+layout: custom
 ---
 
 <h1>{{ page.title }}</h1>
