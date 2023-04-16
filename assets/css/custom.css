@@ -19,16 +19,12 @@ body {
 
 #hero-image {
   text-align: center;
+  margin: 0 0 20px;
 }
 
 ol {
   list-style: none;
   margin-left: -1.4em;
-}
-
-section {
-  border-bottom-width: 0 !important;
-  margin: 0 !important;
 }
 
 .yt-container {
@@ -49,7 +45,6 @@ section {
   height: 100%; 
   aspect-ratio: 560/314;
 }
-
 
 iframe {
   border: 0;

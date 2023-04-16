@@ -8,26 +8,9 @@ story: |
   I like to share my experience at conferences and support companies - as advisor and business angel - in mastering their technical challenges.
 
   Don't hesitate to reach out to me. I'm always open for a chat.
-
 logo: /assets/img/andre_portrait_web.jpeg
 remote_theme: devpg/minimal
 color-scheme: dark
 
 plugins:
   - jekyll-remote-theme
-
-defaults:
-  -
-    scope:
-      path: "hmze"
-    values:
-      website_url: hmze/
-      title: HMZE
-      description: In diesem Podcast unterhalten sich Andreas Wolff, Sebastian Heide-Meyer zu Erpen und André Neubauer über Technologie und Leadership, denn ”Technology is a People Business”.
-      feed_url: hmze/feed/
-      feed_lang: de
-      feed_since: 
-      feed_last:
-      logo: hmze/logo.jpeg
-      feed_owner: Andreas Wolff, Sebastian Heide-Meyer zu Erpen und André Neubauer
-      feed_contact: hmzepodcast@googlemail.com

@@ -5,13 +5,6 @@
     {% assign ColorScheme = site.color-scheme %}
 {% endcase %}
 
-{% case page.logo %}
-  {% when "", nil, false, 0, empty %}
-    {% assign logo = site.logo %}
-  {% else %}
-    {% assign logo = page.logo %}
-{% endcase %}
-
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
@@ -30,19 +23,17 @@
   <body>
     <div class="wrapper">
       <header>
-        <p class="social-media-list">
+        <!-- {{page.layout}} -->
+        {% if page.layout != "content_post" %}
+          <div id=hero-image><img src="{{site.logo | relative_url}}" alt="Logo" /></div>
+        {% endif %}
+         <p class="social-media-list">
             <a rel="me" href="/" title="Home"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#home' | relative_url }}"></use></svg></a>
             <a rel="me" href="https://www.linkedin.com/in/andreneubauer/" target="_blank" title="André Neubauer (LinkedIn)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg></a>
-            <a rel="me" href="/hmze" title="HMZE (Podcast)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#podcast' | relative_url }}"></use></svg></a>
+            <a rel="me" href="https://hmze.io" target="_blank" title="HMZE (Podcast)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#podcast' | relative_url }}"></use></svg></a>
             <a rel="me" href="https://speakerdeck.com/devpg" target="_blank" title="devpg (speakerdeck)"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#speakerdeck' | relative_url }}"></use></svg></a>
         </p>
       </header>
-      <!-- {{page.layout}} -->
-      {% if page.layout != "content_post" %}
-        <section>
-          <div id=hero-image><img src="{{logo | relative_url}}" alt="Logo" /></div>
-        </section>
-      {% endif %}
       <section>
         {{ content }}
       </section>
