@@ -2,6 +2,11 @@ body {
   font: 14px/1.5 Helvetica, sans-serif;
 }
 
+section {
+  border-width: 1px 0 0 0 !important;
+  margin: 0;
+}
+
 .headline {
   text-align: center;
 }
@@ -10,14 +15,9 @@ body {
   text-align: center;
 }
 
-.svg-icon {
-  width: 36px;
-  height: 16px;
-  display: inline-block;
-  fill: currentColor;
-  padding: 5px 3px 2px 5px;
-  vertical-align: text-bottom;
-  transform: scale(1.5);
+.link-list a {
+  margin: 7px;
+  font-weight: bold;
 }
 
 #hero-image {
@@ -29,6 +29,7 @@ body {
   width: 152px;
   height: 152px;
   border-radius: 50%;
+  border: 2px solid var(--clr-text,#fff)
 }
 
 ol {
@@ -60,3 +61,43 @@ iframe {
   margin: 0px;
   padding: 0px;
 }
+
+.gg-external {
+  box-sizing: border-box;
+  position: relative;
+  display:inline-block;
+  transform: scale(0.8);
+  width: 12px;
+  height: 12px;
+  box-shadow:
+  -2px 2px 0 0,
+  -4px -4px 0 -2px,
+  4px 4px 0 -2px;
+  margin-left: -2px;
+  margin-top: 1px
+ }
+ 
+ .gg-external::after,
+ .gg-external::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  right: -4px
+ }
+ 
+ .gg-external::before {
+  background: currentColor;
+  transform: rotate(-45deg);
+  width: 12px;
+  height: 2px;
+  top: 1px
+ }
+ 
+ .gg-external::after {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid;
+  border-top: 2px solid;
+  top: -4px
+ } 
