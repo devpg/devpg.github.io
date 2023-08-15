@@ -1,5 +1,5 @@
 ---
-layout: content_post
+layout: post
 title:  "THE STORY OF SOFTWARE | The Evolution of Software Architecture"
 tags:
 content_pieces: 
