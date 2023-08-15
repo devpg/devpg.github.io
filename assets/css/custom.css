@@ -2,8 +2,11 @@ body {
   font: 14px/1.5 Helvetica, sans-serif;
 }
 
-/* Icons */
-.social-media-list {
+.headline {
+  text-align: center;
+}
+
+.link-list {
   text-align: center;
 }
 
@@ -20,6 +23,12 @@ body {
 #hero-image {
   text-align: center;
   margin: 0 0 20px;
+}
+
+#hero-image img {
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
 }
 
 ol {

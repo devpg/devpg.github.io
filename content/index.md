@@ -1,5 +1,5 @@
 ---
-layout: custom
+layout: default
 ---
 
 {% for post in site.categories["content"] %}
