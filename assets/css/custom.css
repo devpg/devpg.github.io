@@ -36,6 +36,7 @@ section {
   background-color: var(--clr-text,#fff);
   color: var(--clr-bg,#222);
   padding: 0 3px;
+  margin-right: 5px;
 }
 
 ol {
