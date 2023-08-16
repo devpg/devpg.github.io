@@ -9,8 +9,5 @@ layout: default
   <h1 id="{{ currentYear }}" class="section">{{ currentYear }}</h1>
   {% assign year = currentYear %}
   {% endif %}
-
-  <p>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </p>
+  {% include post.md %}
 {% endfor %}
