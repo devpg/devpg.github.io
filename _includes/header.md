@@ -23,3 +23,6 @@
   </head>
   <body>
     <div class="wrapper">
+      <header>
+        <div id=hero-image><img src="{{site.logo | relative_url}}" alt="Logo" /></div>
+      </header>
