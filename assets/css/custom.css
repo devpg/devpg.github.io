@@ -32,6 +32,12 @@ section {
   border: 2px solid var(--clr-text,#fff)
 }
 
+.tag {
+  background-color: var(--clr-text,#fff);
+  color: var(--clr-bg,#222);
+  padding: 0 3px;
+}
+
 ol {
   list-style: none;
   margin-left: -1.4em;
