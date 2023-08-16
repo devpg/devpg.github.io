@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% for post in site.categories["content"] %}
+{% for post in site.posts %}
   {% assign currentYear = post.date | date: "%Y" %}
   
   {% if currentYear != year %}

@@ -43,6 +43,6 @@ layout: default
   {% endcase %}
 {% endfor %}
 
-{% if content != "" %}
+{% if content and content != '' %}
   <p>{{content}}</p>
 {% endif %}

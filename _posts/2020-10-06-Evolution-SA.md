@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "THE STORY OF SOFTWARE | The Evolution of Software Architecture"
+type: Podcast
 tags:
 content_pieces: 
     - type: buzzsprout
