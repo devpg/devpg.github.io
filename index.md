@@ -1,8 +1,8 @@
 ---
-layout: welcome
+layout: slim
 ---
 
-# Hi! I'm André.
+# Hi! I'm André Neubauer.
 
 I’ve been shaping tech environments for more than 15 years, bringing technology and business together. During that time, I’ve worked for startup’s, scaleup’s, up to big corporations. I have profound experience in software engineering and even more experience on the leadership side. In this role, I’m building and guiding organizations and transforming companies and their business on a tactical and strategic level. In recent years I was primarily working as a Chief Technology Officer.
 
@@ -11,3 +11,5 @@ I've studied informatics and, later on, business economics. Yet to say, my focus
 I like to share my experience at conferences and support companies - as advisor and business angel - in mastering their technical challenges.
 
 Don't hesitate to reach out to me. I'm always open for a chat.
+
+{% include latest.md %}
