@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Der Chefs von Devs Fireside Chat von Golem.de mit Matthias Schleuthner und André Neubauer"
+language: German
 tags:
 content_pieces: 
     - type: youtube
