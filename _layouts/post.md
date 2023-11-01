@@ -4,12 +4,14 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 <p>
+  &mdash;
   {{ page.date | date: "%d %B %Y" }}
   {% case page.tags %}
   {% when "", nil, false, 0, empty %}
   {% else %}
     <span id=tags> // {{ page.tags | join: " " }}</span>
   {% endcase %}
+  &mdash;
 </p>
 
 {% for content_piece in page.content_pieces %}
