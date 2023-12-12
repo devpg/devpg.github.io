@@ -16,5 +16,4 @@ You could argue that you want to streamline efforts for testing and deployment a
 
 So what’s left for the outer loop? I definitely see all surrounding activities (e.g. alignment meetings). These activities are important as well. And while automation is hard, usually there is lots of room for optimization … talking from my own experience.
 
-
 PS: This post also got posted at [LinkedIn](https://www.linkedin.com/pulse/innerouter-loop-time-spent-good-metric-software-andr%2525C3%2525A9-neubauer-ushce%3FtrackingId=pWySU%252BmqSgubBBxDoF1rXw%253D%253D/?trackingId=pWySU%2BmqSgubBBxDoF1rXw%3D%3D)
