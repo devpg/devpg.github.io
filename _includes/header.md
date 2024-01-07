@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <title>André Neubauer - Chief Technology Officer @ Trusted Shops | Tech Advisor | Coach for Tech Leaders</title>
+    <title>André Neubauer - Seasoned Tech Leader (CTO, VP Engineering) | Tech Advisor | Coach for Tech Leaders</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
