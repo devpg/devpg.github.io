@@ -5,7 +5,7 @@ layout: default
 <h1>{{ page.title }}</h1>
 <p>
   &mdash;
-  {{ page.date | date: "%d %B %Y" }}
+  {{ page.date | date: "%B %d, %Y" }}
   {% case page.tags %}
   {% when "", nil, false, 0, empty %}
   {% else %}
