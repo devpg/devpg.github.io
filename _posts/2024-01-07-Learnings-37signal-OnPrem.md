@@ -21,7 +21,7 @@ The specific answer to this boils down to <ins>two questions</ins>.
 ### #1: What's your goal? ###
 This question is of key importance. It defines your focus and the single piece you want to achieve. In regard to 37signal, their only goal was cost savings. But it also could have been new products, new features or technical aspects like performance or resilience to name a few.
 
-It's important to have a clear answer because capacity is only avialable once. That's why mixed goals (this and that) or vague goals ("becoming better") do not help. Once your goal is set, you have to deal with a second question.
+It's important to have a clear answer because capacity is only available once. That's why mixed goals (this and that) or vague goals ("becoming better") do not help. Once your goal is set, you have to deal with a second question.
 
 ### #2: What's the context you are operating in? ###
 Every company is different, so every context is. The context is defined by all aspects impacting the decision. It's crucial to understand all limitations and restrictions. In regard to cloud repatriation the following aspects (among others) are of interest.
@@ -44,8 +44,8 @@ Even though cost saving is your only goal, this is not sufficient to justify a c
 
 37signal had very likely a comparable context back then. They had the money, the skills, the stable demand, etc. So they decided for a repatriation of their cloud usage to an on-premise environment!
 
-### Finally ###
-Given the different aspects and their characteristics, the context will - most likely - not speak for cloud repatriation (regardless of the goal). Still, 37signal might have paved the way for more companies to leave the cloud.
+## Finally ##
+Given the different aspects and their characteristics, for the majority the context will - most likely - not speak for a cloud repatriation  (regardless of the goal). Still, 37signal might have paved the way for more companies to leave the cloud.
 
 ---
 
