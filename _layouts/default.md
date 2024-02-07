@@ -1,7 +1,5 @@
 {% include header.md %}
-  <p class="headline">
-    Experienced tailwind leader, tech' enthusiast, strategist and opponent of standstill.<br>
-    CTO@TrustedShops & Tech advisor
+  <p class="headline">Seasoned CTO - Tech' Enthusiast, Strategist and Opponent of standstill - Tech Advisor & Coach for Tech Leaders
   </p>
   {% include navigation.md %}
   <section>
