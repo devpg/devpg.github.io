@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Working on a system & Working in a system - A fundamental principle of Trusted Shops' software engineering organization"
+title:  "Working ON a system & Working IN a system - A fundamental principle of Trusted Shops' software engineering organization"
 type: Article
 ---
 
