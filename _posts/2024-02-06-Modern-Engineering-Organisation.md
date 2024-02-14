@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Working ON a system & Working IN a system - A fundamental principle of Trusted Shops' software engineering organization"
+title:  "Working ON a system & Working IN a system"
 type: Article
 ---
 
@@ -33,5 +33,4 @@ At the end the disciplinary structure is serving the operational structure. But 
 ---
 
 ## Link(s) ##
-<span id="1">[1]</span> [The Common Thread: All Social Organizations as Systems
-](https://management.org/organizations/systems.htm)
+<span id="1">[1]</span> [The Common Thread: All Social Organizations as Systems](https://management.org/organizations/systems.htm)
