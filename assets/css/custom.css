@@ -3,12 +3,9 @@ body {
 }
 
 section {
-  border-width: 1px 0 0 0 !important;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1) !important;
   margin: 0;
-}
-
-.headline {
-  text-align: center;
 }
 
 .link-list {
@@ -32,78 +29,8 @@ section {
   border: 2px solid var(--clr-text,#fff)
 }
 
-.tag {
-  background-color: var(--clr-text,#fff);
-  color: var(--clr-bg,#222);
-  padding: 0 3px;
-  margin-right: 5px;
-}
-
-ol {
-  margin-left: -1.4em;
-}
-
-.yt-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-}
-.yt-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.sd-container iframe {
-  width: 100%;
-  height: 100%; 
-  aspect-ratio: 560/314;
-}
-
 iframe {
   border: 0;
   margin: 0px;
   padding: 0px;
 }
-
-.gg-external {
-  box-sizing: border-box;
-  position: relative;
-  display:inline-block;
-  transform: scale(0.8);
-  width: 12px;
-  height: 12px;
-  box-shadow:
-  -2px 2px 0 0,
-  -4px -4px 0 -2px,
-  4px 4px 0 -2px;
-  margin-left: -2px;
-  margin-top: 1px
- }
- 
- .gg-external::after,
- .gg-external::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute;
-  right: -4px
- }
- 
- .gg-external::before {
-  background: currentColor;
-  transform: rotate(-45deg);
-  width: 12px;
-  height: 2px;
-  top: 1px
- }
- 
- .gg-external::after {
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid;
-  border-top: 2px solid;
-  top: -4px
- } 

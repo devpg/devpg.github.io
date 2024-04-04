@@ -1,6 +1,6 @@
 logo: /assets/img/andre_portrait_square.jpg
 remote_theme: devpg/minimal
-color-scheme: dark
+color-scheme: light
 
 plugins:
   - jekyll-remote-theme
