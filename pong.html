@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <title>PONG – André & Ben Edition</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a0a0a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Courier New', monospace;
+      color: #fff;
+      overflow: hidden;
+      touch-action: none;
+    }
+    h1 {
+      font-size: clamp(0.75rem, 3vw, 1.2rem);
+      letter-spacing: 0.2em;
+      color: #00ffcc;
+      margin-bottom: 10px;
+      text-shadow: 0 0 12px #00ffcc;
+      text-align: center;
+      padding: 0 8px;
+    }
+    #game-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    canvas {
+      border: 2px solid #00ffcc;
+      box-shadow: 0 0 30px #00ffcc44;
+      border-radius: 4px;
+      max-width: calc(100vw - 100px);
+      max-height: 75vh;
+      width: auto;
+      height: auto;
+    }
+    /* Touch controls: vertical button column on the right */
+    #touch-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .touch-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      border: 2px solid #00ffcc;
+      background: #00ffcc22;
+      color: #00ffcc;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      box-shadow: 0 0 12px #00ffcc44;
+      transition: background 0.1s;
+    }
+    .touch-btn:active, .touch-btn.pressed {
+      background: #00ffcc55;
+    }
+    #info {
+      margin-top: 10px;
+      font-size: clamp(0.6rem, 2vw, 0.75rem);
+      color: #444;
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+    #start-btn {
+      margin-top: 12px;
+      padding: 12px 32px;
+      border-radius: 8px;
+      border: 2px solid #00ffcc;
+      background: #00ffcc22;
+      color: #00ffcc;
+      font-family: 'Courier New', monospace;
+      font-size: 1rem;
+      letter-spacing: 0.15em;
+      cursor: pointer;
+      box-shadow: 0 0 14px #00ffcc44;
+      display: none;
+    }
+    #start-btn:active { background: #00ffcc55; }
+  </style>
+</head>
+<body>
+  <h1>🏓 PONG – André &amp; Ben Edition</h1>
+
+  <div id="game-area">
+    <canvas id="c" width="700" height="450"></canvas>
+    <div id="touch-controls">
+      <div class="touch-btn" id="btn-up">▲</div>
+      <div class="touch-btn" id="btn-down">▼</div>
+    </div>
+  </div>
+
+  <button id="start-btn" onclick="handleStartBtn()">▶ START</button>
+  <div id="info">▲▼ = bewegen &nbsp;|&nbsp; Erster mit 7 Punkten gewinnt</div>
+
+  <script>
+    const canvas = document.getElementById('c');
+    const ctx    = canvas.getContext('2d');
+    const W = canvas.width;
+    const H = canvas.height;
+
+    const PADDLE_W = 12, PADDLE_H = 85;
+    const BALL_R   = 7;
+    const WINNING  = 7;
+
+    let state = 'waiting'; // waiting | playing | scored | gameover
+    let playerScore = 0, aiScore = 0;
+
+    const player = { x: 20,               y: H/2 - PADDLE_H/2 };
+    const ai     = { x: W - 20 - PADDLE_W, y: H/2 - PADDLE_H/2 };
+    let ball = makeBall();
+
+    // ── Input ──────────────────────────────────────────────────────
+    const keys = {};
+    document.addEventListener('keydown', e => {
+      keys[e.key] = true;
+      if (e.key === ' ') { handleStart(); e.preventDefault(); }
+    });
+    document.addEventListener('keyup', e => { keys[e.key] = false; });
+
+    // Touch buttons
+    const btnUp   = document.getElementById('btn-up');
+    const btnDown = document.getElementById('btn-down');
+
+    function holdBtn(btn, keyName) {
+      ['touchstart','mousedown'].forEach(ev =>
+        btn.addEventListener(ev, e => { keys[keyName] = true;  btn.classList.add('pressed');    e.preventDefault(); }, { passive: false })
+      );
+      ['touchend','touchcancel','mouseup','mouseleave'].forEach(ev =>
+        btn.addEventListener(ev, e => { keys[keyName] = false; btn.classList.remove('pressed'); e.preventDefault(); }, { passive: false })
+      );
+    }
+    holdBtn(btnUp,   'w');
+    holdBtn(btnDown, 's');
+
+    // Tap canvas / start button
+    canvas.addEventListener('click', handleStart);
+    canvas.addEventListener('touchend', e => { handleStart(); e.preventDefault(); }, { passive: false });
+
+    const startBtn = document.getElementById('start-btn');
+    function handleStartBtn() { handleStart(); }
+
+    function handleStart() {
+      if (state === 'waiting' || state === 'scored') startRound();
+      else if (state === 'gameover') newGame();
+    }
+
+    function showStartBtn(show) {
+      startBtn.style.display = show ? 'inline-block' : 'none';
+    }
+
+    // ── Ball ───────────────────────────────────────────────────────
+    function makeBall() {
+      const angle = (Math.random() * 50 - 25) * Math.PI / 180;
+      const dir   = Math.random() < 0.5 ? 1 : -1;
+      const sp    = 5;
+      return { x: W/2, y: H/2, vx: Math.cos(angle)*sp*dir, vy: Math.sin(angle)*sp, speed: sp };
+    }
+
+    function startRound() {
+      ball  = makeBall();
+      state = 'playing';
+      showStartBtn(false);
+    }
+
+    function newGame() {
+      playerScore = aiScore = 0;
+      player.y = ai.y = H/2 - PADDLE_H/2;
+      state = 'waiting';
+      showStartBtn(true);
+    }
+
+    // ── Update ─────────────────────────────────────────────────────
+    function update() {
+      if (state !== 'playing') return;
+
+      // Player
+      const SP = 6;
+      if ((keys['w']||keys['W']||keys['ArrowUp'])    && player.y > 0)            player.y -= SP;
+      if ((keys['s']||keys['S']||keys['ArrowDown'])  && player.y < H-PADDLE_H)   player.y += SP;
+
+      // AI (slightly beatable)
+      const mid    = ai.y + PADDLE_H/2;
+      const aiSpd  = 4.0;
+      if (mid < ball.y - 8) ai.y = Math.min(ai.y + aiSpd, H - PADDLE_H);
+      if (mid > ball.y + 8) ai.y = Math.max(ai.y - aiSpd, 0);
+
+      // Move ball
+      ball.x += ball.vx;
+      ball.y += ball.vy;
+
+      // Top/bottom wall
+      if (ball.y - BALL_R <= 0)  { ball.y = BALL_R;      ball.vy *= -1; }
+      if (ball.y + BALL_R >= H)  { ball.y = H - BALL_R;  ball.vy *= -1; }
+
+      // Player paddle
+      if (ball.vx < 0
+        && ball.x - BALL_R <= player.x + PADDLE_W
+        && ball.x + BALL_R >= player.x
+        && ball.y >= player.y && ball.y <= player.y + PADDLE_H) {
+        deflect(player, 1);
+      }
+
+      // AI paddle
+      if (ball.vx > 0
+        && ball.x + BALL_R >= ai.x
+        && ball.x - BALL_R <= ai.x + PADDLE_W
+        && ball.y >= ai.y && ball.y <= ai.y + PADDLE_H) {
+        deflect(ai, -1);
+      }
+
+      // Score
+      if (ball.x < 0)  { aiScore++;     onScore(); }
+      if (ball.x > W)  { playerScore++; onScore(); }
+    }
+
+    function deflect(paddle, xSign) {
+      const rel   = (ball.y - (paddle.y + PADDLE_H/2)) / (PADDLE_H/2);
+      const angle = rel * 55 * Math.PI / 180;
+      ball.speed  = Math.min(ball.speed + 0.35, 13);
+      ball.vx     = xSign * Math.cos(angle) * ball.speed;
+      ball.vy     = Math.sin(angle) * ball.speed;
+    }
+
+    function onScore() {
+      if (playerScore >= WINNING || aiScore >= WINNING) {
+        state = 'gameover';
+      } else {
+        state = 'scored';
+      }
+      showStartBtn(true);
+    }
+
+    // ── Draw ───────────────────────────────────────────────────────
+    function draw() {
+      ctx.fillStyle = '#0a0a0a';
+      ctx.fillRect(0, 0, W, H);
+
+      // Center line
+      ctx.setLineDash([8, 12]);
+      ctx.strokeStyle = '#1e1e1e';
+      ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(W/2, 0); ctx.lineTo(W/2, H); ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Scores
+      ctx.font = 'bold 56px Courier New';
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#00ffcc';
+      ctx.shadowColor = '#00ffcc'; ctx.shadowBlur = 10;
+      ctx.fillText(playerScore, W/4,    72);
+      ctx.fillText(aiScore,     W*3/4,  72);
+      ctx.shadowBlur = 0;
+      ctx.font = '12px Courier New';
+      ctx.fillStyle = '#00ffcc77';
+      ctx.fillText('DU', W/4,   90);
+      ctx.fillText('KI', W*3/4, 90);
+
+      // Paddles
+      ctx.fillStyle = '#00ffcc';
+      ctx.shadowColor = '#00ffcc'; ctx.shadowBlur = 8;
+      rr(player.x, player.y, PADDLE_W, PADDLE_H, 4);
+      rr(ai.x,     ai.y,     PADDLE_W, PADDLE_H, 4);
+      ctx.shadowBlur = 0;
+
+      // Ball
+      ctx.fillStyle = '#fff';
+      ctx.shadowColor = '#fff'; ctx.shadowBlur = 14;
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, BALL_R, 0, Math.PI*2);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+
+      // Overlay
+      if (state === 'waiting') {
+        overlay('TIPPE ZUM STARTEN', '#00ffcc');
+      } else if (state === 'scored') {
+        overlay('WEITER →  TIPPEN', '#ffcc00');
+      } else if (state === 'gameover') {
+        const won = playerScore >= WINNING;
+        overlay(won ? '🎉 DU GEWINNST!' : '🤖 KI GEWINNT!', won ? '#00ffcc' : '#ff4466');
+        ctx.font = '15px Courier New';
+        ctx.fillStyle = '#aaa';
+        ctx.fillText('Tippen = nochmal spielen', W/2, H/2 + 44);
+      }
+    }
+
+    function rr(x, y, w, h, r) {
+      ctx.beginPath();
+      ctx.moveTo(x+r, y);
+      ctx.lineTo(x+w-r, y); ctx.quadraticCurveTo(x+w, y,   x+w, y+r);
+      ctx.lineTo(x+w, y+h-r); ctx.quadraticCurveTo(x+w, y+h, x+w-r, y+h);
+      ctx.lineTo(x+r, y+h); ctx.quadraticCurveTo(x,   y+h, x,   y+h-r);
+      ctx.lineTo(x, y+r); ctx.quadraticCurveTo(x,   y,   x+r, y);
+      ctx.closePath(); ctx.fill();
+    }
+
+    function overlay(text, color) {
+      ctx.fillStyle = 'rgba(0,0,0,0.6)';
+      ctx.fillRect(0, 0, W, H);
+      ctx.font = 'bold 28px Courier New';
+      ctx.textAlign = 'center';
+      ctx.fillStyle = color;
+      ctx.shadowColor = color; ctx.shadowBlur = 18;
+      ctx.fillText(text, W/2, H/2);
+      ctx.shadowBlur = 0;
+    }
+
+    // ── Loop ───────────────────────────────────────────────────────
+    function loop() { update(); draw(); requestAnimationFrame(loop); }
+    loop();
+    showStartBtn(true);
+  </script>
+</body>
+</html>
