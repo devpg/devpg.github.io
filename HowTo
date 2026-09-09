@@ -1,12 +1,29 @@
--- INSTALLATION --
+-- SETUP --
 
-1. Install rbenv (https://github.com/rbenv/rbenv)
-2. Install ruby 3.1.2
-3. Set ruby 3.1.2 environment for this project
-4. Install Jekyll (gem install jekyll)
-5. Install bundle (bundle install)
-6. Add webrick (bundle add webrick)
+1. Install rbenv                     https://github.com/rbenv/rbenv
+2. rbenv install                     (reads .ruby-version -> 3.3.6)
+3. gem install bundler
+4. bundle install
 
--- FROM HERE YOU ONLY NEED TO RUN --
+-- RUN --
 
-bundle exec jekyll serve --incremental
+bundle exec jekyll serve --livereload
+
+Then open http://localhost:4000
+
+-- NOTES --
+
+Do not add --incremental while editing files in _layouts or _includes.
+Jekyll 3's incremental mode does not track layout changes, so edits there
+show up only after a full rebuild.
+
+"GitHub Metadata: No GitHub API authentication could be found" on every
+build is expected locally. It only affects site.github.* fields, which this
+site does not use. To silence it, export a GitHub token with no scopes:
+
+    export JEKYLL_GITHUB_TOKEN=ghp_...
+
+The Gemfile pins github-pages to match what GitHub Pages runs in production
+(https://pages.github.com/versions/). GitHub ignores this Gemfile when it
+builds the site -- it exists purely to reproduce that build locally. When
+GitHub bumps its version, bump the pin here and run `bundle update`.
