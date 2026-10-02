@@ -22,8 +22,8 @@ title: Hi! I’m André Neubauer.
 <section class="row">
   <h2><span>01</span> About</h2>
   <div class="cols">
-    <p>For nearly two decades, I’ve shaped tech &amp; product and its interface to the business in varied settings, from startups to major corporations. My journey began in software engineering and evolved into technical leadership, a role I’ve held for the past 15 years.</p>
-    <p>My background is in informatics and business economics. Beyond my role as CTO, I mentor tech leaders and advise businesses, guiding them through their tech challenges.</p>
+    <p>For nearly two decades, I’ve shaped Tech &amp; Product and its interface to the business in varied settings, from startups to major corporations. My journey began in software engineering and evolved into technical leadership, a role I’ve passionately undertaken for the past 15 years.</p>
+    <p>As CTO, I’ve spearheaded transformative projects and strategies, backed by an academic foundation in informatics and business economics. Always at the forefront of modern leadership practices, I’ve transformed companies into tech powerhouses. Beyond my role as CTO, I actively mentor tech leaders and consult businesses, guiding them through their tech challenges.</p>
   </div>
 </section>
 
