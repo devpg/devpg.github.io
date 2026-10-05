@@ -5,29 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} | {{ site.title }}</title>
   {% seo %}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <script src="{{ '/assets/js/daylight.js' | relative_url }}"></script>
 </head>
 <body>
-  <div class="page">
-    <div class="dots"></div>
-    <div class="glow"></div>
-    <div class="wrap">
-      <nav class="nav">
-        <div>devpg.com</div>
-        <div class="links">
-          <a href="https://devpg.substack.com/">The Tech Advisor</a>
-          <a href="https://www.linkedin.com/in/andreneubauer/">LinkedIn</a>
-          <a href="https://hmze.tech">HMZE Podcast</a>
-        </div>
+  <div class="wrap">
+    <header class="bar" data-lamp-mount>
+      <nav>
+        <a href="https://devpg.substack.com/">The Tech Advisor</a>
+        <a href="https://hmze.tech">HMZE Podcast</a>
+        <a href="https://www.linkedin.com/in/andreneubauer/">LinkedIn</a>
       </nav>
-      {{ content }}
-      <footer class="foot">
-        <div>Hosted on GitHub Pages — Credits to <a href="https://github.com/godalming123">godalming123 (Basic theme)</a></div>
-        <div class="status"><span class="dot"></span>Leaderfying…</div>
-      </footer>
-    </div>
+    </header>
+    {{ content }}
+    <footer class="foot">devpg.com</footer>
   </div>
+  <script src="{{ '/assets/js/pong.js' | relative_url }}" defer></script>
 </body>
 </html>
