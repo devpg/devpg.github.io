@@ -22,8 +22,10 @@ title: Hi! I’m André Neubauer.
 <section class="row">
   <h2><span>01</span> About</h2>
   <div class="cols">
-    <p>For nearly two decades, I’ve shaped Tech &amp; Product and its interface to the business in varied settings, from startups to major corporations. My journey began in software engineering and evolved into technical leadership, a role I’ve passionately undertaken for the past 15 years.</p>
-    <p>As CTO, I’ve spearheaded transformative projects and strategies, backed by an academic foundation in informatics and business economics. Always at the forefront of modern leadership practices, I’ve transformed companies into tech powerhouses. Beyond my role as CTO, I actively mentor tech leaders and consult businesses, guiding them through their tech challenges.</p>
+    <p>I build the technology and the organisations that give companies new options: Integrated acquisitions, new business models and now AI. Currently CTPO at Trusted Shops, where I’m shaping its next chapter: Trust as infrastructure for the agentic world. Before that, CTO at smava and Mister Spex and VP at Deutsche Post.</p>
+    <p>At smava, one platform for two fintech brands within a year of acquiring Finanzcheck. At Mister Spex, the platform that turned an online-only retailer into an omnichannel business with over 30 stores and new markets.</p>
+    <p>Leadership is the core of my work. My roots are in software engineering. I’ve been leading for more than 15 years, over ten of them as CTO, in organisations of 200 people and more. I built one from scratch, Deutsche Post’s E-POST development in Berlin and reorganised others around a strong leadership team and teams that make their own decisions and answer for the results.</p>
+    <p>Beyond my roles, I give back to the tech community: As a mentor to tech leaders, as spokesman of the CTO Network at the German Startups Association (2017-2019) and as co-host of the <a href="https://bvc.fm">Beyond Vibe Coding</a> podcast.</p>
   </div>
 </section>
 
